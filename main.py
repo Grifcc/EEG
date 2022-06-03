@@ -8,7 +8,7 @@ from tqdm import tqdm
 import csv
 
 
-dataset_path = '../dataset/GIB-UVA_ERP-BCI.hdf5'
+dataset_path = './dataset/GIB-UVA_ERP-BCI.hdf5'
 model_path="./train"
 epochs=500
 
