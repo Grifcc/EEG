@@ -72,7 +72,7 @@ def train():
             if early_stopping.early_stop:
                 print("Early stopping")
                 break
-    model.load_state_dict(torch.load(model_path+'/checkpoint.pt'))
+    model.load_state_dict(torch.load(model_path+'/checkpoint.pth'))
     with open(model_path+"/train_info.csv","w",encoding="utf-8",newline='') as f:
         f_csv=csv.writer(f)
         f_csv.writerow(val_epoch_loss)
