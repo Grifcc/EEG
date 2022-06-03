@@ -80,8 +80,9 @@ class EEGInception(nn.Module):
             ),
             nn.BatchNorm2d(filters_per_branch * len(scales_samples) // 4),
             activation,
-            nn.Dropout(dropout_rate),
+            # nn.Dropout(dropout_rate),
             nn.AvgPool2d((2, 1)),
+            nn.Dropout(dropout_rate),  #收敛更快
         )
 
         self.dense = nn.Sequential(
