@@ -1,3 +1,3 @@
 # EEG
-week1
+week1  
 pytorch==1.8.1
