@@ -50,8 +50,7 @@ class erp_rnn(nn.Module):
             nn.Conv2d(1, 8, (1, 1)),
             nn.BatchNorm2d(8),
             self.activation,
-            self.avg_pool,
-            nn.Dropout(0.25)
+            nn.Dropout(0.25)，
         )
 
         self.dense = nn.Sequential(
@@ -67,6 +66,7 @@ class erp_rnn(nn.Module):
             concat_in.append(lstm_out)
         concat_out = torch.cat(concat_in, 1)  # 32*48*16
         feat = concat_out.unsqueeze(1)
+        feat=self.avg_pool(feat)
         feat = self.out(feat)
         dense_in = torch.flatten(feat, 1)
 
