@@ -46,11 +46,6 @@ class erp_rnn(nn.Module):
 
         self.avg_pool = nn.AvgPool2d((1, 4))
 
-        self.dense = nn.Sequential(
-            nn.Linear(4 * 1 * 6, n_classes),
-            nn.Softmax(1)
-        )
-
         self.out = nn.Sequential(
             nn.Conv2d(1, 8, (1, 1)),
             nn.BatchNorm2d(8),
