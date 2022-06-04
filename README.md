@@ -1,7 +1,7 @@
 # EEG
 
 ## Description 
-CustomRNN
+CustomRNN  
 EEGinception的pytorch 实现
 
 ## DATASET
