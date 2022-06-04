@@ -33,6 +33,7 @@ class erp_rnn(nn.Module):
                           (1, 8), bias=False, groups=8),  # DepthwiseConv2D
                 nn.BatchNorm2d(16),
                 self.activation,
+                nn.Dropout(dropout_rate)，
             ) for scales_sample in scales_samples
         ])
 
